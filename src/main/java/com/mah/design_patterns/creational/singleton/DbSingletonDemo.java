@@ -1,4 +1,4 @@
-package com.mah.design_patterns.singleton;
+package com.mah.design_patterns.creational.singleton;
 
 public class DbSingletonDemo {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package com.mah.design_patterns.singleton;
+package com.mah.design_patterns.creational.singleton;
 
 public class DbSingleton {
     // Threadsafe: Use volatile to ensure instance remains singleton through any of the changes in the jvm.
