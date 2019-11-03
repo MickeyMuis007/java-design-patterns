@@ -10,12 +10,12 @@
           class="com.mah.spring_fundamental_demo.repository.department.Impl.HibernateDepartmentRepositoryImpl" />
 
     <bean name="customerService"
-          class="com.mah.spring_fundamental_demo.service.customer.Impl.CustomerServiceImpl">
-        <property name="customerRepository" ref="customerRepository" />
+          class="com.mah.spring_fundamental_demo.service.customer.Impl.CustomerServiceImpl" autowire="byType">
+<!--        <property name="customerRepository" ref="customerRepository" />-->
     </bean>
     <bean name="departmentService"
-        class="com.mah.spring_fundamental_demo.service.department.Impl.DepartmentService">
-        <constructor-arg index="0" ref="departmentRepository" />
+        class="com.mah.spring_fundamental_demo.service.department.Impl.DepartmentService" autowire="constructor">
+<!--        <constructor-arg index="0" ref="departmentRepository" />-->
     </bean>
 
 </beans>
