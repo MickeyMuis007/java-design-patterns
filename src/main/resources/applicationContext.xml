@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean name="customerRepository"
+        class="com.mah.spring_fundamental_demo.repository.customer.Impl.HibernateCustomerRepositoryImpl" />
+    <bean name="departmentRepository"
+          class="com.mah.spring_fundamental_demo.repository.department.Impl.HibernateDepartmentRepositoryImpl" />
+
+    <bean name="customerService"
+          class="com.mah.spring_fundamental_demo.service.customer.Impl.CustomerServiceImpl">
+        <property name="customerRepository" ref="customerRepository" />
+    </bean>
+    <bean name="departmentService"
+        class="com.mah.spring_fundamental_demo.service.department.Impl.DepartmentService">
+        <constructor-arg index="0" ref="departmentRepository" />
+    </bean>
+
+</beans>
