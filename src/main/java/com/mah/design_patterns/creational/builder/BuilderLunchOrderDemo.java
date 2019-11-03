@@ -1,4 +1,6 @@
-package com.mah.design_patterns.creational.builder.model;
+package com.mah.design_patterns.creational.builder;
+
+import com.mah.design_patterns.creational.builder.model.LunchOrder;
 
 public class BuilderLunchOrderDemo {
     public static void main(String[] args) {
