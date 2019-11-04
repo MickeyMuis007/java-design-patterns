@@ -8,7 +8,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class HibernateCustomerRepositoryImpl implements ICustomerRepository {
+    private String dbUsername;
+
     public List<Customer> findAll() {
+        System.out.println("[HibernateCustomerRepositoryImpl] dbUsername: " + dbUsername);
         List<Customer> customers = new ArrayList<>();
 
         CustomerBuilder customerBuilder = new CustomerBuilder();
@@ -17,5 +20,9 @@ public class HibernateCustomerRepositoryImpl implements ICustomerRepository {
         customers.add(customer);
 
         return customers;
+    }
+
+    public void setDbUsername(String dbUsername) {
+        this.dbUsername = dbUsername;
     }
 }

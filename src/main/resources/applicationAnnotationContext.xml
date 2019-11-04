@@ -8,7 +8,7 @@
     http://www.springframework.org/schema/context/spring-context.xsd">
 
     <context:annotation-config />
-
+    <context:property-placeholder location="app.properties" />
     <context:component-scan base-package="com.mah.spring_fundamental_demo.xml_annotation_configured" />
 
 </beans>

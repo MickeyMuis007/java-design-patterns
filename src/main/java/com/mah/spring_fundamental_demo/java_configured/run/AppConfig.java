@@ -11,10 +11,19 @@ import com.mah.spring_fundamental_demo.java_configured.service.department.Impl.D
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
+import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 
 @Configuration
 @ComponentScan({"com.mah.spring_fundamental_demo.java_configured"})
+@PropertySource("app.properties")
 public class AppConfig {
+    
+    @Bean
+    public static PropertySourcesPlaceholderConfigurer getPropertySourcesPlaceholderConfigurer() {
+        return new PropertySourcesPlaceholderConfigurer();
+    }
+    
 //    @Bean(name="customerService")
 //    public ICustomerService getCustomerService() {
 //        CustomerServiceImpl service = new CustomerServiceImpl();
