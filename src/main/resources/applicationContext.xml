@@ -5,16 +5,16 @@
     http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean name="customerRepository"
-        class="com.mah.spring_fundamental_demo.repository.customer.Impl.HibernateCustomerRepositoryImpl" />
+        class="com.mah.spring_fundamental_demo.xml_bean_configured.repository.customer.Impl.HibernateCustomerRepositoryImpl" />
     <bean name="departmentRepository"
-          class="com.mah.spring_fundamental_demo.repository.department.Impl.HibernateDepartmentRepositoryImpl" />
+          class="com.mah.spring_fundamental_demo.xml_bean_configured.repository.department.Impl.HibernateDepartmentRepositoryImpl" />
 
     <bean name="customerService"
-          class="com.mah.spring_fundamental_demo.service.customer.Impl.CustomerServiceImpl" autowire="byType">
+          class="com.mah.spring_fundamental_demo.xml_bean_configured.service.customer.Impl.CustomerServiceImpl" autowire="byType">
 <!--        <property name="customerRepository" ref="customerRepository" />-->
     </bean>
     <bean name="departmentService"
-        class="com.mah.spring_fundamental_demo.service.department.Impl.DepartmentService" autowire="constructor">
+          class="com.mah.spring_fundamental_demo.xml_bean_configured.service.department.Impl.DepartmentService" autowire="constructor">
 <!--        <constructor-arg index="0" ref="departmentRepository" />-->
     </bean>
 
